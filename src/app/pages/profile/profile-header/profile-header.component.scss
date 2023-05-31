@@ -1,0 +1,38 @@
+:host {
+    .lang-dropdown {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+
+        .btn:focus{
+            box-shadow:none
+        }
+
+        .dropdown-menu {
+            min-width: 6rem;
+        }
+    }
+
+    .header{
+        
+        position: relative;
+        // background-color: #E02C2B;
+        // height: calc(20vh + 3.5rem);
+        z-index: -2;
+        /* bg */
+
+
+
+        // background-image: url('/assets/bg/curvy.svg') ;
+        background-image: url('/assets/image/bg/bg.svg') ;
+        // border-bottom-right-radius: 4rem;
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .btn{
+        color: #fff;
+    }
+    
+}

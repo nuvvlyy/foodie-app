@@ -1,0 +1,68 @@
+<layout-header [tittleHearder]="('orderHistory.orderDetails' | translate ) + ' - ' + orderDetails.orderNumber" *ngIf="isShowHeader"></layout-header>
+<div class="content px-4 position-relative"  [ngClass]="{'pt-25 h-100vh': !isShowHeader, 'h-w-header': isShowHeader}">
+    <div class="card">
+        <div class="stepper d-flex flex-column mt-3 me-2 ">
+            <div class="d-flex mb-1">
+              <div class="d-flex flex-column pe-2 align-items-center">
+                <img class="py-2 px-3 text-white mb-1 svg" *ngIf="orderDetails.orderDate" src="/assets/image/icon/order-submit-active.svg" />
+                <img class="py-2 px-3 text-white mb-1 svg" *ngIf="!orderDetails.orderDate" src="/assets/image/icon/order-submit.svg" />
+                <div class="line h-100" [ngClass]="{'bg-primary': orderDetails.cookingOn}" ></div>
+              </div>
+              <div class="w-100">
+                <div class="d-flex flex-row justify-content-between align-items-baseline" >
+                  <p class="text-dark mb-1 fw-bold">{{'orderHistory.orderSubmitted' | translate }}</p>
+                  <small class="text-muted time pe-3" *ngIf="orderDetails.orderDate">{{orderDetails.orderDate | date:'HH:mm,LLLL dd,yyyy'}}</small>
+                </div>
+                <p class="lead text-muted pb-3">{{'orderHistory.orderSubmitted' | translate }}</p>
+              </div>
+            </div>
+            <div class="d-flex mb-1">
+              <div class="d-flex flex-column pe-2 align-items-center">
+                <img class="py-2 px-3 text-white mb-1 svg" *ngIf="orderDetails.cookingOn" src="/assets/image/icon/order-accept-active.svg"/>
+                <img class="py-2 px-3 text-white mb-1 svg" *ngIf="!orderDetails.cookingOn"src="/assets/image/icon/order-accept.svg"/>
+                <div class="line h-100" [ngClass]="{'bg-primary': orderDetails.cookingOn}" ></div>
+              </div>
+              <div class="w-100">
+                <div class="d-flex flex-row justify-content-between align-items-baseline" >
+                  <p class="text-dark mb-1 fw-bold">{{'orderHistory.orderAccepted' | translate }}</p>
+                  <small class="text-muted time pe-3"  *ngIf="orderDetails.cookingOn">{{orderDetails.cookingOn | date:'HH:mm,LLLL dd,yyyy'}}</small>
+                </div>
+                <p class="lead text-small text-muted pb-3">{{'orderHistory.orderAcceptedDescription' | translate }}</p>
+              </div>
+            </div>
+            <div class="d-flex mb-1">
+                <div class="d-flex flex-column pe-2 align-items-center">
+                    <img class="py-2 px-3 text-white mb-1 svg"  *ngIf="orderDetails.deliveryOn" src="/assets/image/icon/order-delivery-active.svg" />
+                    <img class="py-2 px-3 text-white mb-1 svg"  *ngIf="!orderDetails.deliveryOn" src="/assets/image/icon/order-delivery.svg" />
+                    <div class="line h-100" [ngClass]="{'bg-primary': orderDetails.completeOn}" ></div>
+                </div>
+              <div class="w-100">
+                <div class="d-flex flex-row justify-content-between align-items-baseline" >
+                  <p class="text-dark mb-1 fw-bold">{{'orderHistory.deliveryInProgress' | translate }}</p>
+                  <small class="text-muted time pe-3"  *ngIf="orderDetails.deliveryOn">{{orderDetails.deliveryOn | date:'HH:mm,LLLL dd,yyyy'}}</small>
+                </div>
+                <p class="lead text-small text-muted pb-3">{{'orderHistory.deliveryInProgressDescription' | translate }}</p>
+              </div>
+            </div>
+              <div class="d-flex mb-1">
+                <div class="d-flex flex-column pe-2 align-items-center ">
+                    <img class="py-2 px-3 text-white mb-1 svg" *ngIf="orderDetails.completeOn" src="/assets/image/icon/order-delivered-active.svg" />
+                    <img class="py-2 px-3 text-white mb-1 svg" *ngIf="!orderDetails.completeOn" src="/assets/image/icon/order-delivered.svg" />
+                  <div class="line h-100 d-none"></div>
+                </div>
+
+              <div class="w-100">
+                <div class="d-flex flex-row justify-content-between align-items-baseline" >
+                  <p class="text-dark mb-1 fw-bold">{{'orderHistory.delivered' | translate }}</p>
+                  <small class="text-muted time pe-3"  *ngIf="orderDetails.completeOn">{{orderDetails.completeOn | date:'HH:mm,LLLL dd,yyyy'}}</small>
+                </div>
+                <p class="lead text-small text-muted pb-3">{{'orderHistory.deliveredDescription' | translate }}</p>
+              </div>
+              </div>
+          </div>
+    </div>
+    <button type="button" class="btn btn-shadow mx-auto text-center my-4 w-50 btn-primary d-block" (click)="refresh()"> Refresh </button> 
+    <div class="d-flex fixed-bottom position-absolute">
+      <button-back [backToLanding]="false" [routerLink]="['/order']" class="ms-4 my-4"></button-back> <button type="button" class="btn btn-shadow me-4 my-4 w-100 btn-primary" (click)="orderDetails.logisticTracking ? openLogisticTrackingPage(orderDetails.logisticTracking): null"> {{ orderDetails.logisticTracking ? ('orderHistory.trackingLink' | translate) : 'orderHistory.trackinglinkNotAvailable' | translate}}</button> 
+  </div>
+</div>

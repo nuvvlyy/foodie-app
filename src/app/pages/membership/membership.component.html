@@ -1,0 +1,119 @@
+<layout-header [tittleHearder]="('membership.name' | translate)" *ngIf="isShowHeader"></layout-header>
+<div class="content px-4 position-relative" [ngClass]="{'pt-25 h-100vh': !isShowHeader, 'h-w-header': isShowHeader}" *ngIf="!memberDetails.loyalty || !memberDetails">
+    <p>{{ 'membership.membershipProfileDoesNotExist' | translate }}</p>
+    <div class="d-flex fixed-bottom position-absolute">
+        <button type="button" class="btn btn-shadow m-4 btn-primary w-100"  [routerLink]="['/']" >{{ 'general.close' | translate | titlecase}}</button> 
+    </div>
+</div>
+<div class="content px-4 d-flex flex-column align-content-center position-relative" [ngClass]="{'pt-25 h-100vh': !isShowHeader, 'h-w-header': isShowHeader}" *ngIf="memberDetails.loyalty">
+   <div class="container p-0">
+    <img class="w-100" src="{{loyalty.loyaltyImage}}"/>
+    <p class="position-absolute text-type fs-3">{{loyalty.type | uppercase }}</p>
+    <p class="position-absolute text-point fs-6">Points {{ memberDetails.loyalty.totalPoint }}</p>
+   </div>
+
+   <div class="w-100 mt-4" *ngIf="!isShowDetails">
+       <div *ngFor="let order of orderHistory" class="d-flex justify-content-between">
+        <p *ngIf="order.orderNumber">{{order.orderNumber}}</p>
+        <p *ngIf="order.orderNumber">Points {{order.totalPointsEarned}}</p>
+       </div>
+       <div *ngIf="!orderHistory">
+            <p class="text-center">{{ 'membership.nullOrderHistory1' | translate }}</p>
+            <p class="text-center">{{ 'membership.nullOrderHistory2' | translate }}</p>
+
+       </div>
+   </div>
+   <div *ngIf="isShowDetails">
+    <form [formGroup]="memberForm" class="w-100 mt-4 px-2">
+        <div class="row mb-3">
+            <img class="col-2 contain" src="/assets/image/icon/birthday.png"/>
+            <div class="col-10">
+                <input type="text"
+                    [ngClass]="{'is-invalid': isFormSubmit && memberForm.controls.birthday.errors}"
+                    [(ngModel)]="memberInfo.birthday"
+                    value="memberInfo.birthday"
+                    formControlName="birthday"
+                    placeholder="{{'membership.birthday' | translate }}"
+                    class="form-control"
+                    name="birthday"
+                    [bsConfig]="{ dateInputFormat: 'DD-MM-YYYY' , containerClass: 'theme-red' , showWeekNumbers: false, startView: 'year'}"
+                    bsDatepicker
+                    triggers="memberDetails.birthday ? false : mouseenter:click"
+                    >
+                <!-- <input type="text" formControlName="birthday" class="form-control" placeholder="{{'membership.birthday' | translate }}" name="birthday" [(ngModel)]="memberInfo.birthday" required /> -->
+            </div>
+          </div>
+        <div class="row mb-3">
+            
+                <img class="col-2 contain" src="/assets/image/icon/status.png"/>
+                <div class="col-10">
+                    <ng-select 
+                    formControlName="maritalStatus"
+                    [ngClass]="{'was-validated': isFormSubmit && memberForm.controls.maritalStatus.errors}"
+                    placeholder="{{'membership.status' | translate }}"
+                    [items]="maritalStatuses"
+                    bindValue="value"
+                    [clearable]="false"
+                    [(ngModel)]="memberInfo.maritalStatus"
+                    [searchable]="false">
+                    <ng-template ng-option-tmp let-item="item">
+                        {{ item.label | translate }}
+                    </ng-template>
+                    <ng-template ng-label-tmp let-item="item">
+                        {{ item.label | translate }}
+                    </ng-template>
+            </ng-select>
+                    <!-- <input type="text" formControlName="status" class="form-control" name="status"  placeholder="{{'membership.status' | translate }}" [(ngModel)]="memberInfo.maritalStatus" required/> -->
+            </div>
+        </div>
+        <div class="row mb-3">
+            
+                <img class="col-2 contain" src="/assets/image/icon/occupation.png"/>
+                <div class="col-10">
+                <ng-select placeholder="{{ 'membership.gender' | translate }}"
+                    [ngClass]="{'was-validated': isFormSubmit && memberForm.controls.clientType.errors}"
+                    formControlName="clientType"
+                    [items]="clientTypes"
+                    bindValue="value"
+                    [clearable]="false"
+                    [(ngModel)]="memberInfo.clientType"
+                    [searchable]="false">
+                    <ng-template ng-option-tmp let-item="item">
+                        {{ item.label | translate }}
+                    </ng-template>
+                    <ng-template ng-label-tmp let-item="item">
+                        {{ item.label | translate }}
+                    </ng-template>
+                </ng-select>
+                    <!-- <input type="text" formControlName="occupation" class="form-control" name="occupation" placeholder="{{'membership.occupation' | translate }}" [(ngModel)]="memberInfo.clientType" required/> -->
+            </div>
+        </div>
+        <div class="row mb-3">
+               <img class="col-2 contain" src="/assets/image/icon/gender.png"/> 
+               <div class="col-10">
+                <ng-select placeholder="{{ 'membership.gender' | translate }}"
+                    formControlName="gender"
+                    [ngClass]="{'was-validated': isFormSubmit && memberForm.controls.gender.errors}"
+                    [items]="genders"
+                    bindValue="value"
+                    [clearable]="false"
+                    [(ngModel)]="memberInfo.gender"
+                    [searchable]="false">
+
+                    <ng-template ng-option-tmp let-item="item">
+                        {{ item.label | translate }}
+                    </ng-template>
+                    <ng-template ng-label-tmp let-item="item">
+                        {{ item.label | translate }}
+                    </ng-template>\
+                </ng-select>
+                   <!-- <input type="text" formControlName="gender" class="form-control" name="gender" placeholder="{{ 'membership.gender' | translate }}"  [(ngModel)]="memberInfo.gender" required/>  -->
+            </div>
+            
+        </div>
+    </form>
+   </div>
+   <div class="d-flex fixed-bottom position-absolute">
+        <button-back [backToLanding]="!isShowDetails" (click)="isShowDetails ? isShowDetails = !isShowDetails : null" class="ms-4 my-4"></button-back> <button type="button" class="btn btn-shadow me-4 my-4 w-100 btn-primary" (click)="onSubmit()" >{{ isShowDetails ? ('membership.updateMembershipDetails' | translate) : ('membership.membershipInfoDetails' | translate) }}</button> 
+    </div>
+</div>

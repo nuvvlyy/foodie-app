@@ -1,0 +1,15 @@
+
+
+<div class="d-flex align-items-center content-shop">
+    <img class="shop-logo" [src]="brendInfo.brandLogo" />
+    <div class="d-flex flex-column ms-3">
+        <p *ngIf="getShopStatus(brendInfo.operatingTime)=== 'OPEN'" class=" mb-1"><fa-icon class="icon-green me-2" [icon]="faCircle"></fa-icon><span class="me-3">{{ 'landing.open' | translate | titlecase }}</span> {{ 'landing.lastOrder' | translate | titlecase }} {{ getTimeFormat(brendInfo.operatingTime.lastOrderTime) }}</p>
+        <p *ngIf="getShopStatus(brendInfo.operatingTime)=== 'CLOSING_SOON'" class=" mb-1"><fa-icon class="icon-orange me-2" [icon]="faCircle"></fa-icon>{{ 'landing.closingSoon' | translate | titlecase }}</p>
+        <p *ngIf="getShopStatus(brendInfo.operatingTime)=== 'CLOSED'" class=" mb-1"><fa-icon class="icon-red me-2" [icon]="faCircle"></fa-icon>{{ 'landing.closedPreOrderOnly' | translate | titlecase }}</p>
+        <p *ngIf="getShopStatus(brendInfo.operatingTime)=== 'OPEN'" class=" mb-1"><fa-icon class="me-2"[icon]="faClock"></fa-icon>{{ getTimeFormat(brendInfo.operatingTime.startTime) }} - {{ getTimeFormat(brendInfo.operatingTime.endTime) }} </p>
+        <p *ngIf="getShopStatus(brendInfo.operatingTime)=== 'CLOSING_SOON' || getShopStatus(brendInfo.operatingTime)=== 'CLOSED'" class=" mb-1"><fa-icon class="me-2"[icon]="faClock"></fa-icon>{{ 'landing.lastOrder' | translate | titlecase }} {{ getTimeFormat(brendInfo.operatingTime.lastOrderTime) }} </p>
+        <!-- <p class="text-muted mb-1">12,400 people like this</p> -->
+        <p class="d-flex text-break mb-1" *ngIf="member.loyalty"><fa-icon [icon]="faStar" class="me-2 text-primary"></fa-icon>{{member.loyalty?.type || ''}} <br>{{ member.loyalty?.loyaltyDescription || ''}}</p> 
+    </div>
+
+</div>

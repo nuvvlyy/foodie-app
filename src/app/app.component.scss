@@ -1,0 +1,27 @@
+// @import "node_modules/bootstrap/scss/bootstrap";
+@import '../assets/scss/themes';
+
+
+$theme-colors: (
+  "primary": map-color($primary),
+//   "danger": #ff4136
+);
+.form-control {
+  border-radius: 0.75rem !important;
+  padding: 1rem 0.75rem !important;
+    &:focus {
+      border: none;
+      box-shadow: none;
+  }
+}
+*[ng-reflect-router-link]:focus {
+  outline: none;
+  box-shadow: none;
+  outline-color:none;
+}
+
+.spinner-content{
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}

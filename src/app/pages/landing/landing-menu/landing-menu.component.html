@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="row">
+      <div class="col-4 col-md-3 col-xl-2 my-2">
+        <div class="menu d-flex flex-column align-items-center justify-content-center" [routerLink]="['profile']">
+            <div class="icon rounded-circle d-flex justify-content-center">
+                <img src="/assets/image/icon/landing/profile.svg"/>
+            </div>
+            <p>
+                {{ 'profile.menu.name' | translate | titlecase }}
+            </p>
+            
+        </div>
+      </div>
+      <div class="col-4 col-md-3 col-xl-2 my-2">
+        <div class="menu d-flex flex-column align-items-center justify-content-center" [routerLink]="isMember ? ['address'] : null">
+            <div class="icon rounded-circle d-flex justify-content-center">
+                <img src="/assets/image/icon/landing/location.svg"/>
+            </div>
+            <p>
+                {{ 'profile.menu.address' | translate | titlecase }}
+            </p>
+            
+        </div>
+      </div>
+      <div class="col-4 col-md-3 col-xl-2 my-2">
+        <div class="menu d-flex flex-column align-items-center justify-content-center" [routerLink]="isMember ? ['order'] : null">
+            <div class="icon rounded-circle d-flex justify-content-center">
+                <img src="/assets/image/icon/landing/buy.svg"/>
+            </div>
+            <p>
+                {{ 'profile.menu.order' | translate | titlecase }}
+            </p>
+            
+        </div>
+      </div>
+      <div class="col-4 col-md-3 col-xl-2 my-2">
+        <div class="menu d-flex flex-column align-items-center justify-content-center" [routerLink]="isMember ? ['promotions'] : null">
+            <div class="icon rounded-circle d-flex justify-content-center">
+                <img src="/assets/image/icon/landing/ticket.svg"/>
+            </div>
+            <p>
+                {{ 'profile.menu.promotions' | translate | titlecase }}
+            </p>
+            
+        </div>
+      </div>
+      <div class="col-4 col-md-3 col-xl-2 my-2">
+        <div class="menu d-flex flex-column align-items-center justify-content-center" [routerLink]="isMember ? ['membership'] : null">
+            <div class="icon rounded-circle d-flex justify-content-center">
+                <img src="/assets/image/icon/landing/membership.svg"/>
+            </div>
+            <p>
+                {{ 'profile.menu.member' | translate | titlecase }}
+            </p>
+            
+        </div>
+      </div>
+      <div class="col-4 col-md-3 col-xl-2 my-2">
+        <div class="menu d-flex flex-column align-items-center justify-content-center" [routerLink]="isMember ? ['order'] : null" [queryParams]="{istracking: true}">
+            <div class="icon rounded-circle d-flex justify-content-center">
+                <img src="/assets/image/icon/order-delivery-active.svg"/>
+            </div>
+            <p>
+                {{ 'profile.menu.tracking' | translate | titlecase }}
+            </p>
+            
+        </div>
+      </div>
+    </div>
+  </div>

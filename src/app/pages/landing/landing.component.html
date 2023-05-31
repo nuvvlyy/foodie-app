@@ -1,0 +1,6 @@
+<app-landing-banner></app-landing-banner>
+<app-landing-shop></app-landing-shop>
+<app-landing-menu></app-landing-menu>
+<div class="d-flex m-4 ">
+    <button type="button" class="btn me-2 btn-primary px-4" (click)="switchLanguage()">{{ language === 'th' ? 'EN' : 'ไทย'}}</button><button type="button" class="btn btn-primary w-100" (click)="openStartOrderPage()">{{ !isMember ? ('landing.gotoProfile' | translate) : ('orderHistory.startNewOrdering' | translate)}}</button> 
+ </div>

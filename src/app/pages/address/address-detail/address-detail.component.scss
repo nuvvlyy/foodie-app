@@ -1,0 +1,91 @@
+.h-100vh {
+    height: 100vh !important;
+}
+.header{
+    width: 100%;
+    position: fixed;
+    background: #ffffff;
+    padding: 10px 0;
+    color: #333;
+    top: 0;
+    left: 0;
+    height: 80px;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    z-index: 99;
+}
+.icon-back{
+    // position: fixed;
+    // left: 0;
+}
+.ms-n5 {
+    margin-left: -40px;
+}
+.border-radius{
+    border-radius: 8px;
+}
+.btn-search{
+    background-color: var(--primary-500);
+    color: #fff;
+    border-radius: 8.95px;
+    z-index : 99;
+}
+.address-detail{
+    background: #fff;
+    padding: 1.5rem;
+    color: #333;
+    // height: 30vh;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+.input-group, .input-group-append{
+    height: 3rem;
+    & .btn-check:focus + .btn, .btn:focus{
+        box-shadow: none;
+    }
+}
+.form-control{
+    &.search{
+    height: 3rem;
+    }
+    &:focus {
+        z-index: 0;
+       box-shadow: none;
+    }
+}
+.maps {
+    width: 100%;
+    min-height: 50vh;
+    height: calc(100vh - 265px);
+}
+.map-container{
+    height: calc(100vh - 170px) !important;
+    width: 100% !important;
+}
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.map-content {
+    z-index: 10;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 390px;
+    background-color: black;
+    color: #FFF;
+}
+
+.position-button {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    background: #FFFFFF;
+    border: 2px solid #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 12px;
+}

@@ -1,0 +1,35 @@
+<layout-header [tittleHearder]="('address.name' | translate )" *ngIf="isShowHeader"></layout-header>
+<div class="content px-4 position-relative"  [ngClass]="{'pt-25 h-100vh': !isShowHeader, 'h-w-header': isShowHeader}">
+  <div *ngFor="let address of addressData; let i = index">
+    <div class="d-flex flex-column">
+      <div class="d-flex justify-content-between">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault" (change)="handelRadio(i)"
+            [checked]="(status === i)">
+          <label class="form-check-label" for="flexRadioDefault1">
+            <span *ngIf="address.addressName" class="fw-bold" class="address-detail">{{address.addressName}}</span>
+            <p (click)="editAddress(address.id)"  *ngIf="!address.addressName" class="address-detail">
+              {{address.houseNo}} {{address.roadName}} {{address.subDistrict}} {{address.province}}<img src="/assets/image/icon/right.svg"/>
+            </p>
+            
+          </label>
+        </div>
+        <!-- <div ><fa-icon [icon]="faTrashAlt" ></fa-icon></div> -->
+        <div> <img (click)="remove(address.id)" src="/assets/image/icon/bin.svg"/></div>
+       
+        <!-- <div class="icon"></div>  -->
+      </div>
+        <p (click)="editAddress(address.id)" *ngIf="address.addressName"  class="address-detail ml-40">
+          {{address.houseNo}} {{address.roadName}} {{address.subDistrict}} {{address.province}}<img src="/assets/image/icon/right.svg"/>
+      </p>
+      
+    </div>
+  </div>
+
+  <div class="d-flex fixed-bottom position-absolute">
+    <button-back class="ms-4 my-4"> </button-back> <button type="button" class="btn btn-primary btn-shadow w-100 me-4 my-4" (click)="addNewAddress()">{{ 'address.addNewAddress' | translate }}</button> 
+ </div>
+  <!-- <div class="alert alert-info" role="alert">
+    A simple info alert—check it out!
+  </div> -->
+</div>

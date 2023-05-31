@@ -1,0 +1,41 @@
+:host{
+    .circle {
+        border: 2.5px dashed #fff;
+        background-color: transparent;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        top: calc( 1.29757785467128 * 25vw);
+        width: 150px;
+        height: 150px;
+        border-radius: 150px;
+        z-index: 2;
+        // box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+      }
+      
+    .image{
+        width: 130px;
+        height: 130px;
+        background-color: #EEEEEE;
+        border-radius: 150px;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        position: absolute;
+        top: calc( 1.29757785467128 * 25vw);
+        z-index: 1;
+        border-radius: 150px;
+        /* blur */
+
+        // background: #333333;
+        // opacity: 0.3;
+        // filter: blur(50px);
+
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    }
+}

@@ -1,0 +1,246 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "~bootstrap/scss/spinners";
+/*------------------------------------
+- COLORprimary
+------------------------------------*/
+
+$primary:var(--primary-500);
+$primary_t2: var(--primary-600);
+$primary_t3: var(--primary-100);
+$primary_t4: var(--primary-200);
+$primary_t5: var(--primary-200);
+$primary_t6: var(--primary-A400);
+$primary_t7: var(--primary-A700);
+$primary_t8: var(--primary-900);
+$primary_t9: var(--primary-50);
+
+$primary_shadow: var(--primary-100);
+$primary_shadow01: var(--primary-100);
+$primary_text_color_dark_bright: #fff;
+
+// $theme-colors: () !default;
+
+$input-focus-border-color: $primary_t4;
+// stylelint-disable-next-line scss/dollar-variable-default
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": #ff4136
+);
+
+
+body{
+  font-family: 'Prompt', sans-serif ;
+}
+
+.alert-primary {
+  color: $primary_t5;
+  background-color: $primary_t9;
+  border-color: $primary_t4;
+}
+
+.alert-primary hr {
+  border-top-color: $primary_t3;
+}
+
+.alert-primary .alert-link {
+  color: $primary_t8;
+}
+
+.badge-primary {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary;
+}
+
+.badge-primary[href]:hover, .badge-primary[href]:focus {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t2;
+}
+
+.bg-primary {
+  background-color: $primary !important;
+}
+
+a.bg-primary:hover, a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: $primary_t2 !important;
+}
+
+.border-primary {
+  border-color: $primary !important;
+}
+
+.btn-primary {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary;
+  border-color: $primary;
+  padding-top: 0.75rem ;
+  padding-bottom: 0.75rem;
+}
+
+.btn-primary:hover {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t7;
+  border-color: $primary_t2;
+}
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem $primary_shadow;
+}
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t2;
+  border-color: transparent;
+  box-shadow: 0px 4px 12px $primary_shadow;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $primary_shadow;
+}
+
+.btn-outline-primary {
+  color: $primary;
+  background-color: transparent;
+  border-color: $primary;
+}
+
+.btn-outline-primary:hover {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem $primary_shadow;
+}
+
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: $primary;
+  background-color: transparent;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $primary_shadow;
+}
+
+.list-group-item-primary {
+  color: $primary_t5;
+  background-color: $primary_t4;
+}
+
+.list-group-item-primary.list-group-item-action:hover, .list-group-item-primary.list-group-item-action:focus {
+  color: $primary_t5;
+  background-color: $primary_t3;
+}
+
+.list-group-item-primary.list-group-item-action.active {
+  color: $primary_text_color_dark_bright;
+  background-color: $primary_t5;
+  border-color: $primary_t5;
+}
+
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+  background-color: $primary_t4;
+}
+
+.table-hover .table-primary:hover {
+  background-color: $primary_t3;
+}
+
+.table-hover .table-primary:hover > td,
+.table-hover .table-primary:hover > th {
+  background-color: $primary_t3;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+a.text-primary:hover, a.text-primary:focus {
+  color: $primary_t2 !important;
+}
+
+.form-control {
+  border-radius: 0.75rem !important;
+  padding: 1rem 0.75rem !important;
+  line-height: 18px;
+  height: 50px;
+  font-size: 14px;
+    &:focus {
+      // border: none;
+      box-shadow: none;
+  }
+}
+.btn{
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: .75rem;
+  // &.btn-shadow{
+  //   box-shadow: 0px 4px 16px $primary_shadow01;
+  // }
+}
+
+.form-check-input:checked {
+  background-color: $primary;
+  border-color: $primary;
+  box-shadow: 0px 4px 16px $primary_shadow01;
+}
+.btn-check:focus + .btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem $primary_shadow01;
+}
+
+p {
+  font-size: 14px;
+}
+label {
+  font-weight: 600;
+  font-size: 16px;
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: #fff;
+  background-color: $primary;
+  border-color: transparent;
+  box-shadow: 0px 4px 12px $primary_shadow;
+}
+
+.bs-datepicker-head,
+.bs-datepicker-head, .bs-datepicker button:active,
+.bs-datepicker-body table td span.selected, 
+.bs-datepicker-body table td.selected span,
+.bs-datepicker-body table td span[class*="select-"]:after,
+.bs-datepicker-body table td[class*="select-"] span:after, 
+.bs-datepicker-body table td.active-week span:hover 
+{
+  background-color: $primary !important; 
+}
+
+.bs-datepicker-body table td.week span 
+{
+  color: $primary !important; 
+}
+// svg>path{ /*target the image with css*/
+//   fill: var($primary);
+// }
+
+button:active , .menu:active{
+  transform: translateY(3px) !important;
+}

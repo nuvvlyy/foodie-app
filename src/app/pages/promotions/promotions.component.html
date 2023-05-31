@@ -1,0 +1,19 @@
+<layout-header [tittleHearder]="('Promotions' | translate)" *ngIf="isShowHeader"></layout-header>
+
+<div class="content position-relative"  [ngClass]="{'pt-25 h-100vh': !isShowHeader, 'h-w-header': isShowHeader}">
+    <div class="d-flex flex-column" *ngIf="promotions" >
+       <div class="card text-center my-2" *ngFor="let promotion of promotions">
+        <div class="card-body">
+            <img src="{{promotion.image}}" class="card-img-top" />
+            <h5 class="card-title pt-4 mb-1">{{ getPromotionTitle(promotion) }}</h5>
+            <p *ngIf="promotion.description" class="card-text fw-light mb-1">{{ getPromotionDescription(promotion) }}</p>
+            <!-- <p class="mb-1"><small class="card-subtitle mb-0 fw-light">Copy this code</small></p> -->
+            <!-- <div class="btn btn-primary rounded-pill p-1 px-4 fw-light">XXXX</div> -->
+          </div>
+        </div> 
+    </div>
+    
+  <div class="d-grid fixed-bottom position-absolute">
+    <button type="button" class="btn btn-shadow m-4 btn-primary"  [routerLink]="['/']" >{{ 'general.close' | translate | titlecase}}</button> 
+  </div>
+</div>

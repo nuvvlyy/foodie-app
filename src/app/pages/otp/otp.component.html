@@ -1,0 +1,19 @@
+<div class="header d-flex justify-content-center align-items-center" *ngIf="isShowHeader">
+  <div class="d-flex px-4 icon-back" (click)="back()"> <fa-icon [icon]="faChevronLeft"></fa-icon> </div>
+</div>
+<div class="content px-4">
+  <h4>OTP</h4>	
+  <p>{{ 'otp.title' | translate:{'phoneNumber' : otpResponse.phoneNumber } }}</p>
+
+  <div class="my-5 text-center" >
+    <!-- <form> -->
+    <div id="otp" class="d-flex flex-row justify-content-center">
+      <input  *ngFor="let i of otpInputId, let x = index" class="m-2 text-center form-control form-control-solid input-rounded focus:border-blue-400 focus:shadow-outline"  type="text" pattern="\d*" id="{{i}}" (ngModelChange)="onFocus($event,x)" (keyup)="onInputEntry($event,x)" [(ngModel)]="otp[x]" value={otp[x]}/>
+    </div>
+  </div>
+  <div class="form-text d-inline d-flex justify-content-center align-items-center"><div class="form-text d-inline">{{ 'otp.didNotReceiveText' | translate }}</div> <div class="form-text d-inline text-primary text-decoration-underline" (click)="resendOtp()">{{ 'otp.resend' | translate }}</div></div>
+  <div class="d-grid mt-5">
+    <button type="submit" class="btn btn-primary btn-shadow" (click)="confirmOtp()">{{ 'otp.confirm' | translate }}</button> 
+ </div>
+ 
+</div>

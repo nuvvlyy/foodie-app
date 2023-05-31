@@ -1,0 +1,11 @@
+<div class="modal-body d-flex flex-column align-items-center">
+    <h4 class="modal-title text-center" id="modal-title">{{title}}</h4>
+
+    <p class="text-center">{{description}}</p>
+<div>
+   
+  <button type="button" class="btn btn-secondary" *ngIf="isShowCancel" (click)="modal.close(false)">{{ cancelLabel }}</button>
+  <button type="button" class="btn btn-primary" (click)="modal.close(true)">{{confirm}}</button>
+</div>
+   
+</div>

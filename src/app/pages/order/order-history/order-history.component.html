@@ -1,0 +1,27 @@
+<layout-header [tittleHearder]="('orderHistory.name' | translate )" *ngIf="isShowHeader"></layout-header>
+<div class="content position-relative" [ngClass]="{'pt-25 h-100vh': !isShowHeader, 'h-w-header': isShowHeader}">
+    <div *ngFor="let order of orders" class="card my-4 p-3">
+        <div class="d-flex justify-content-between">
+            <p class="text-price">{{order.orderNumber}}</p>
+            <p class="fw-75" [ngClass]="{'complete' : order.statusText === 'Complete',
+            'cancelled' : order.statusText === 'cancelled',
+            'ongoing' : order.statusText !== 'Complete' && order.statusText !== 'cancelled'
+        }">{{ getStatus(order.statusText) }}</p>
+            
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="text-price">{{order.totalAmount | currency:'THB' + ' ':'code' :'.2-2'}}</p>
+            <!-- <button class="btn fw-75 complete"  *ngIf="order.statusText === 'Complete'">{{'orderHistory.reOrder' | translate }}</button> -->
+            <button class="btn fw-75 ongoing"  *ngIf="order.statusText !== 'Complete' && order.statusText !== 'cancelled'" (click)="orderDetails(order.id)">{{'orderHistory.tracking' | translate }}</button>
+        </div>
+         
+    </div>
+    <div *ngIf="orders.length === 0">
+        <img src="/assets/image/bg/empty-track.svg"/>
+        <span class="text-center d-flex justify-content-center py-3" *ngIf="tracking">{{'orderHistory.noOrder' | translate }}</span>
+        <span class="text-center d-flex justify-content-center py-3" *ngIf="!tracking">{{'orderHistory.noOrderHistory' | translate }}</span>
+    </div>
+    <div class="d-flex fixed-bottom position-absolute">
+        <button-back class="ms-4 my-4"></button-back> <button type="button" class="btn me-4 my-4 btn-primary w-100" (click)="openStartOrderPage()">{{ 'orderHistory.startNewOrder' | translate }}</button> 
+     </div>
+</div>

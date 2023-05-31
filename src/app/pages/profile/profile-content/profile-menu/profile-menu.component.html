@@ -1,0 +1,42 @@
+<div class="d-flex justify-content-between px-3">
+    <div class="d-flex flex-column active">
+        <div class="menu rounded-circle d-flex justify-content-center">
+            <img src="/assets/image/icon/profile.svg" />
+        </div> 
+        <span class="text-center pt-2">
+            {{ 'profile.menu.name' | translate }}
+        </span>
+    </div>
+    <div class="d-flex flex-column active" [routerLink]="isMember ? ['/address'] : null">
+        <div class="menu rounded-circle d-flex justify-content-center">
+            <img src="/assets/image/icon/location.svg" />
+        </div> 
+        <span class="text-center pt-2">
+            {{ 'profile.menu.address' | translate }}
+        </span>
+    </div>
+    <div class="d-flex flex-column active" [routerLink]="isMember ? ['/order'] : null">
+        <div class="menu rounded-circle d-flex justify-content-center">
+            <img src="/assets/image/icon/buy.svg" />
+        </div> 
+        <span class="text-center pt-2">
+            {{ 'profile.menu.order' | translate }}
+        </span>
+    </div>
+    <div class="d-flex flex-column active" [routerLink]="isMember ? ['/promotions'] : null">
+        <div class="menu rounded-circle d-flex justify-content-center">
+            <img src="/assets/image/icon/ticket.svg" />
+        </div> 
+        <span class="text-center pt-2">
+            {{ 'profile.menu.promotions' | translate }}
+        </span>
+    </div>
+    <div class="d-flex flex-column active" [routerLink]="isMember ? ['/membership'] : null">
+        <div class="menu rounded-circle d-flex justify-content-center">
+            <img src="/assets/image/icon/user.svg" />
+        </div> 
+        <span class="text-center pt-2">
+            {{ 'profile.menu.member' | translate }}
+        </span>
+    </div>
+</div>

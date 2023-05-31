@@ -1,0 +1,113 @@
+{
+    "general" : {
+        "save": "Save",
+        "OK": "OK",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "yes": "Yes",
+        "no": "No",
+        "close": "close"
+    },
+    "landing":{
+        "open":"Open",
+        "lastOrder": "Last Order",
+        "closedPreOrderOnly":"Closed Pre-Order Only",
+        "closingSoon":"Closing Soon",
+        "peopleLikeThis": "people like this",
+        "startOrdering": "Start Ordering !",
+        "gotoProfile": "Please update your profile to continue"
+    },
+    "profile": {
+        "menu" : 
+        { 
+            "name": "Profile",
+            "address": "Address",
+            "order": "Order",
+            "promotions": "Promotions",
+            "member": "Membership",
+            "tracking": "tracking"
+        },
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "phoneNumber": "Phone number",
+        "profileTitle":"Please update your profile here. Changes will be saved once OTP is confirmed.",
+        "yourFirstName": "Your first name",
+        "yourLastName": "Your last name",
+        "yourEmail": "Your email",
+        "yourPhoneNumber": "Your phone number"
+    },
+    "otp": {
+        "name":"OTP",
+        "title" : "Enter the code we just sent to {{ phoneNumber }}",
+        "didNotReceiveText" : "If your didn’t receive a code.",
+        "resend" : "Resend",
+        "confirm" : "Confirm",
+        "confirmDialog" :{
+            "title" : "Oops!",
+            "description": "Please enter correct OTP from SMS."
+        }
+    },
+    "address": {
+        "name": "Address",
+        "locationSearch": "Type location you want...",
+        "houseNumber": "House Number",
+        "RoadNumber": "Flat/road number",
+        "additionalInfo": "Additional info",
+        "addNewAddress": "Add New Address",
+        "deleteAddress": "Are you sure ?",
+        "deleteAddressDescription": "",
+        "allowLocation":"Please allow location tracking in settings"
+    },
+    "orderHistory": {
+        "order": "Order",
+        "name" : "Order History",
+        "tracking" : "Tracking",
+        "reOrder" : "Re-order",
+        "cancelled" : "Cancelled",
+        "complete" : "Complete",
+        "startNewOrder" : "Start New Order",
+        "startNewOrdering" : "Start Ordering !",
+        "orderDetails" : "Order Details",
+        "orderSubmitted" : "Order Submitted",
+        "orderSubmittedDescription" : "Your order has been submitted",
+        "orderAccepted" : "Order Accepted",
+        "orderAcceptedDescription" : "We are now cooking your order",
+        "orderPrepared": "Order Prepared",
+        "orderPreparedDescription": "Your order has been prepare",
+        "riderOnThisWay" : "Rider on his way",
+        "riderName" : "Rider Name",
+        "riderOnThisWayDescription" : "Please wait for rider to pickup your food",
+        "deliveryInProgress" : "Delivery in Progress",
+        "deliveryInProgressDescription":"Hang on! Your food is on the way",
+        "orderTrackingLink" : "Order Tracking Link",
+        "delivered" : "Delivered",
+        "deliveredDescription" : "Thank you for your order. Please order with us again.",
+        "noOrder":"There are no orders currently in Delivery.",
+        "noOrderHistory":"You do not have any order history.",
+        "orderTracking":"Order Tracking",
+        "trackingLink":"Tracking Link",
+        "trackinglinkNotAvailable":"Tracking link not yet available"
+    },
+    "membership": {
+        "name" : "Membership",
+        "updateMembershipDetails" : "Update Member Information",
+        "membershipInfoDetails" : "Member Information",
+        "birthday" : "Birthday",
+        "status" : "Single / Married",
+        "single": "Single",
+        "married":"Married",
+        "occupation" : "Individual / Business",
+        "individual" : "Individual",
+        "business" : "Business",
+        "gender" : "Male / Female",
+        "male" : "Male",
+        "female" : "Female",
+        "notTelling": "Not Telling",
+        "nullOrderHistory1": "You do not have any order history.",
+        "nullOrderHistory2": "Your points will show once you start placing orders.",
+        "membershipProfileDoesNotExist": "Membership profile does not exist for your profile yet"
+    },
+    "promotions" : "Promotions"
+
+}

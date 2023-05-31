@@ -1,0 +1,28 @@
+:host{
+    .menu{
+        width: 60px;
+        height: 60px;
+        background-color: #f3f3f3;
+        
+    }
+    span{
+        color: #949494;
+        font-size:.75rem;
+    }
+    .active{
+        outline-style:none;
+        & .menu{
+            background-color: #E02C2B; 
+            // color: #E02C2B;
+        }
+        & span{
+            color: #E02C2B;
+        }
+    }
+    *[ng-reflect-router-link]:focus {
+        outline: none;
+        box-shadow: none
+        ;
+    }
+      
+}

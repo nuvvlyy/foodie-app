@@ -1,0 +1,36 @@
+.content{
+    // padding-top:100px;
+    &.pt-25{
+        padding-top:25px
+    }
+}
+.address-detail{
+    width: 50vw;
+    margin-left: 18px;
+    color: #656565;
+    font-weight: 500;
+}
+.icon{
+    mask: 'url(/assets/image/icon/bin.svg) no-repeat center';
+    -webkit-mask : 'url(/assets/image/icon/bin.svg) no-repeat center'
+}
+.btn-save{
+    background-color: var(--primary-500);
+    color: #fff;
+}
+.opacity-6{
+    opacity: 0.6;
+}
+.ml-40{
+    margin-left: 40px;
+}
+
+.h-100vh{
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+.h-w-header{
+    min-height: calc(100vh - 100px);
+    padding-bottom: 100px;
+}

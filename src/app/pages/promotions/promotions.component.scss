@@ -1,0 +1,34 @@
+.content {
+    // padding-top: 100px;
+    padding-inline: 2rem;
+    padding-bottom: 90px;
+    .card{
+        border-radius: 15px;
+        .card-title{
+            color: #23222C;
+            font-weight: 200;
+        }
+        .card-text{
+            color: #48474E;
+        }
+        .btn {
+            border-radius: 1rem;
+        }
+        .card-img-top{
+            border-radius: 15px;
+        }
+    }
+    &.pt-25{
+        padding-top: 25px;
+    }
+}
+
+.h-100vh{
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+.h-w-header{
+    min-height: calc(100vh - 100px);
+    padding-bottom: 100px;
+}

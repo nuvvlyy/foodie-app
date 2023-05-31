@@ -1,0 +1,114 @@
+{
+    "general" : {
+        "save": "บันทึก",
+        "OK": "ตกลง",
+        "cancel": "ยกเลิก",
+        "delete": "ลบ",
+        "yes": "ใช่",
+        "no": "ไม่ใช่",
+        "close": "ปิด"
+    },
+    "landing":{
+        "open":"เปิด",
+        "lastOrder": "ออเดอร์สุดท้าย",
+        "closedPreOrderOnly":"ร้านปิดแล้ว เฉพาะพรีออเดอร์เท่านั้น",
+        "closingSoon":"Closing Soon",
+        "peopleLikeThis": "ผู้คนชอบสิ่งนี้",
+        "startOrdering": "เริ่มสั่งอาหาร",
+        "gotoProfile": "อัพเดทโปรไฟล์เพื่อใช้งานต่อไป"
+    },
+    "profile": {
+        "menu" : 
+        { 
+            "name": "โปรไฟล์",
+            "address": "ที่อยู่",
+            "order": "ออเดอร์",
+            "promotions": "โปรโมชั่น",
+            "member": "สมาชิก",
+            "tracking": "ติดตาม"
+        },
+        "firstName": "ชื่อ",
+        "lastName": "นามสกุล",
+        "email": "อีเมล",
+        "phoneNumber": "เบอร์โทรศัพท์",
+        "profileTitle":"กรุณาอัพเดทโปรไฟล์ของคุณที่นี่. การเปลี่ยนแปลงจะถูกบันทึกเมื่อ OTP ได้รับการยืนยัน",
+        "yourFirstName": "ชื่อจริง",
+        "yourLastName": "นามสกุล",
+        "yourEmail": "อีเมลของคุณ",
+        "yourPhoneNumber": "เบอร์โทรศัพท์ของคุณ"
+    },
+    "otp": {
+        "name" : "OTP",
+        "title" : "ใส่รหัสที่เราส่งไปที่ {{ phoneNumber }}",
+        "didNotReceiveText" : "หากคุณไม่ได้รับรหัส",
+        "resend" : "ส่งอีกครั้ง",
+        "confirm" : "ยืนยัน",
+        "confirmDialog" :{
+            "title" : "",
+            "description": "โปรดใส่รหัส OTP ที่ได้รับจากข้อความ"
+        }
+    },
+    "address": {
+        "name": "ที่อยู่",
+        "locationSearch": "พิมพ์ที่อยู่ของคุณ",
+        "houseNumber": "บ้านเลขที่",
+        "RoadNumber": "เลขที่ห้อง/เลขซอย",
+        "additionalInfo": "คำอธิบายเพิ่มเติม",
+        "addNewAddress": "เพิ่มที่อยู่ใหม่",
+        "deleteAddress": "คุณแน่ใจใช่ไหม?",
+        "deleteAddressDescription": "",
+        "allowLocation":"กรุณาตั้งค่าการเข้าถึงข้อมูลสถานที่ของคุณ"
+
+    },
+    "orderHistory": {
+        "order": "การสั่งซื้อ",
+        "name" : "ประวัติการสั่งซื้อ",
+        "tracking" : "ติดตามออเดอร์",
+        "reOrder" : "สั่งอีกครั้ง",
+        "cancelled" : "ยกเลิก",
+        "complete" : "เสร็จสิ้น",
+        "startNewOrder" : "สั่งซื้อ",
+        "startNewOrdering" : "สั่งซื้อ!",
+        "orderDetails" : "รายละเอียดออเดอร์",
+        "orderSubmitted" : "สั่งสำเร็จ ",
+        "orderSubmittedDescription" : "ส่งคำสั่งซื้อของคุณแล้ว",
+        "orderAccepted" : "รับออเดอร์แล้ว",
+        "orderAcceptedDescription" : "ร้านได้รับออเดอร์ของคุณแล้ว",
+        "orderPrepared": "กำลังเตรียมออเดอร์",
+        "orderPreparedDescription": "กำลังเตรียมออเดอร์ของคุณแล้ว",
+        "riderOnThisWay" : "Rider on his way",
+        "riderName" : "Rider Name",
+        "riderOnThisWayDescription" : "คนขับกำลังไปรับอาหาร โปรดรอสักครู่",
+        "deliveryInProgress" : "รอสักครู่ อาหารของคุณกำลังมา",
+        "deliveryInProgressDescription" : "หวังว่าคุณจะได้รับประสบการณ์ที่ดี",
+        "delivered" : "จัดส่งเรียบร้อย",
+        "deliveredDescription" : "ขอบคุณสำหรับคำสั่งซื้อ เราหวังว่าจะได้รับคำสั่งซื้อจากคุณอีกครั้ง",
+        "orderTrackingLink" : "ลิ้งติดตามออเดอร์",
+        "noOrder":"ไม่มีออเดอร์ที่กำลังจัดส่ง",
+        "noOrderHistory":"คุณยังไม่มีประวัติการสั่งซื้อ",
+        "orderTracking":"ติดตามออเดอร์",
+        "trackingLink":"ลิ้งติดตามออเดอร์",
+        "trackinglinkNotAvailable":"ลิ้งติดตามออเดอร์ยังไม่พร้อมใช้งาน"
+    },
+    "membership": {
+        "name" : "สมาชิก",
+        "updateMembershipDetails" : "อัพเดทข้อมูลสมาชิก",
+        "membershipInfoDetails" : "ข้อมูลสมาชิก",
+        "birthday" : "วันเกิด",
+        "status" : "โสด / สมรส",
+        "occupation" : "ลูกจ้าง / เจ้าของกิจการ",
+        "gender" : "ผู้ชาย / ผู้หญิง",
+        "single": "โสด",
+        "married":"สมรส",
+        "individual" : "รายบุคคล",
+        "business" : "เจ้าของกิจการ",
+        "male" : "ผู้ชาย",
+        "female" : "ผู้หญิง",
+        "notTelling": "ไม่เปิดเผย",
+        "nullOrderHistory1": "คุณยังไม่มีประวัติการสั่งซื้อ",
+        "nullOrderHistory2": "คะแนนของคุณจะแสดงเมื่อมีการสั่งซื้อ",
+        "membershipProfileDoesNotExist": "ข้อมูลสมาชิกยังไม่มีอยู่ในโปรไฟล์ของคุณ"
+    },
+    "promotions" : "โปรโมชั่น"
+
+}
